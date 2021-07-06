@@ -39,7 +39,7 @@ while num != guess:
     except ValueError:
         print("Please enter a number.  ")
         continue
-    print(num)
+    
     if num > guess:
         print("Its not that one. Your guess is lower than the number I am thinking off, try again.")
         count += 1
