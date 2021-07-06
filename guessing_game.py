@@ -57,3 +57,4 @@ while num != guess:
         break
 
 print("Great job {}, you got it right!! It only took you {} guess(es)!".format(player_name, count))
+print("Thank you for playing.")
