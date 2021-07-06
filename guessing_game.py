@@ -19,7 +19,7 @@ test = input("Would you like to test your luck with a guessing game?(yes/no)  ")
 test = test.lower()
 while test != 'yes':
     if test == 'no':
-        sys.exit("I understand then. Better to not tempt your fortune.")
+        sys.exit("I understand then. Better to not tempt your luck.")
 
     else:
         print("Please just answer the question with a 'yes' or a 'no'")
@@ -38,8 +38,12 @@ while num != guess:
         guess = int(input("What number am I thinking of?  "))
     except ValueError:
         print("Please enter a number.  ")
+    if guess < 1:
+        print("Please enter a number between 1 and 10"  )
         continue
-    
+    if guess > 10:
+        print("Please enter a number between 1 and 10"  )
+        continue
     if num > guess:
         print("Its not that one. Your guess is lower than the number I am thinking off, try again.")
         count += 1
@@ -52,4 +56,4 @@ while num != guess:
         count += 1
         break
 
-print("Great job {}, you got it right!! It only took you {} guesses!".format(player_name, count))
+print("Great job {}, you got it right!! It only took you {} guess(es)!".format(player_name, count))
